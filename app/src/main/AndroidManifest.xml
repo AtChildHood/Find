@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.find">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginAndRegister.MainActivity" />
+        <activity android:name=".LoginAndRegister.LoginActivity" />
+        <activity android:name=".LoginAndRegister.FindPasswordActivity" />
+        <activity android:name=".LoginAndRegister.RegisterActivity" />
+        <activity android:name=".LoginAndRegister.RegisterGetCaptchaActivity" />
+        <activity android:name=".LoginAndRegister.UserInfoActivity" />
+        <activity android:name=".LoginAndRegister.ChangePersonIntroduceActivity" />
+        <activity android:name=".HomePage.HomePageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomePage.TestActivity"></activity>
+        <activity android:name=".HomePage.ChatGroupActivity"></activity>
+    </application>
+
+</manifest>
