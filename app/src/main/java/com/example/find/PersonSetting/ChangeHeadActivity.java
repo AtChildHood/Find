@@ -1,4 +1,4 @@
-package com.example.find.HomePage;
+package com.example.find.PersonSetting;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,31 +13,29 @@ import java.util.HashMap;
 import java.util.Map;
 
 import Adapter.GridViewAdapter;
-import InterfaceRealization.ChatGroupGridViewOperator;
+import InterfaceRealization.ChangeHeadGridViewOperator;
 
-public class ChatGroupActivity extends AppCompatActivity {
+public class ChangeHeadActivity extends AppCompatActivity {
 
     GridView gridview;
     ArrayList<Map<String, Object>> ls;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_group);
+        setContentView(R.layout.activity_change_head);
         gridview = (GridView)findViewById(R.id.gridView);
-        ls=getLs();
-        gridview.setAdapter(new GridViewAdapter(this,ls,new ChatGroupGridViewOperator()));
+        ls = getLs();
+        GridViewAdapter gridviewAdapter = new GridViewAdapter(this,ls,new ChangeHeadGridViewOperator());
+        gridview.setAdapter(gridviewAdapter);
     }
 
     public ArrayList<Map<String, Object>> getLs(){
         ArrayList<Map<String, Object>> ls = new ArrayList();
         Map map = new HashMap();
-        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.example6);
+        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.example5);
 
         for(int i=0;i<10;i++){
-            map.put("imageview",bitmap2);
-            map.put("title","天涯聊天室");
-            map.put("content","在线20人");
+            map.put("content",bitmap2);
             ls.add(map);
             map = new HashMap();
         }

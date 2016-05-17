@@ -1,10 +1,10 @@
-package com.example.find.HomePage;
+package com.example.find.PersonSetting;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.GridView;
+import android.widget.ListView;
 
 import com.example.find.R;
 
@@ -13,20 +13,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 import Adapter.GridViewAdapter;
-import InterfaceRealization.ChatGroupGridViewOperator;
+import InterfaceRealization.SchoolActivityOperator;
 
-public class ChatGroupActivity extends AppCompatActivity {
+public class MyActivityActivity extends AppCompatActivity {
 
-    GridView gridview;
+    ListView listView;
     ArrayList<Map<String, Object>> ls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat_group);
-        gridview = (GridView)findViewById(R.id.gridView);
+        setContentView(R.layout.activity_my);
+        listView = (ListView)findViewById(R.id.listView);
         ls=getLs();
-        gridview.setAdapter(new GridViewAdapter(this,ls,new ChatGroupGridViewOperator()));
+        listView.setAdapter(new GridViewAdapter(this,ls,new SchoolActivityOperator()));
     }
 
     public ArrayList<Map<String, Object>> getLs(){
@@ -35,9 +35,11 @@ public class ChatGroupActivity extends AppCompatActivity {
         Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(),R.mipmap.example6);
 
         for(int i=0;i<10;i++){
-            map.put("imageview",bitmap2);
-            map.put("title","天涯聊天室");
-            map.put("content","在线20人");
+            map.put("activity",bitmap2);
+            map.put("month","5月");
+            map.put("date","10");
+            map.put("school","武汉大学");
+            map.put("club","武汉大学印包摄影协会");
             ls.add(map);
             map = new HashMap();
         }

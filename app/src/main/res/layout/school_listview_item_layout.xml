@@ -3,16 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/fl_activity"
-    >
-    <MyView.MyViewPager
+    android:layout_height="match_parent">
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/vp_activity">
+        app:layout_marginTopPercent="5%"
+        android:scaleType="fitXY"
+        android:id="@+id/iv_activity">
 
-
-    </MyView.MyViewPager>
+    </ImageView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,6 +20,7 @@
         app:layout_heightPercent="15%"
         app:layout_widthPercent="9%"
         app:layout_marginRightPercent="5%"
+        app:layout_marginTopPercent="5%"
         android:alpha="0.8"
         android:layout_gravity="top|right"
         android:background="@color/colorTheme"
@@ -29,9 +30,11 @@
         android:layout_height="wrap_content"
         android:text="28"
         android:textSize="18sp"
+        android:id="@+id/tv_date"
         android:textColor="@color/white"
         android:layout_gravity="top|right"
         app:layout_marginRightPercent="7.5%"
+        app:layout_marginTopPercent="5%"
         />
 
     <TextView
@@ -40,7 +43,7 @@
         app:layout_heightPercent="11%"
         app:layout_widthPercent="9%"
         app:layout_marginRightPercent="5%"
-        app:layout_marginTopPercent="17%"
+        app:layout_marginTopPercent="22%"
         android:alpha="0.8"
         android:layout_gravity="top|right"
         android:background="@color/colorTheme"
@@ -50,11 +53,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2月"
+        android:id="@+id/tv_month"
         android:textSize="15sp"
         android:textColor="@color/white"
         android:layout_gravity="top|right"
         app:layout_marginRightPercent="7%"
-        app:layout_marginTopPercent="16.5%"
+        app:layout_marginTopPercent="22%"
         />
 
     <android.support.percent.PercentRelativeLayout

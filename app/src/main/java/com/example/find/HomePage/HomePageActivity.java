@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -25,6 +26,7 @@ public class HomePageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+        Log.d("HomePage","onCreate()");
         rb_introduce = (RadioButton)findViewById(R.id.rb_introduce);
         rb_club = (RadioButton)findViewById(R.id.rb_club);
         rg_group = (RadioGroup)findViewById(R.id.rg_group);
@@ -67,5 +69,31 @@ public class HomePageActivity extends AppCompatActivity {
 
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+//        getFragmentManager().beginTransaction().remove(introduce).remove(club).commit();
+//        finish();
+        Intent setIntent = new Intent(Intent.ACTION_MAIN);
+        setIntent.addCategory(Intent.CATEGORY_HOME);
+        setIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(setIntent);
+
+    }
+
+    @Override
+    protected void onStop(){
+
+        //getFragmentManager().beginTransaction().remove(introduce).remove(club).commit();
+        super.onStop();
+        Log.d("11111111111","onStop()");
+    }
+    @Override
+    protected void onDestroy(){
+        //getFragmentManager().beginTransaction().remove(introduce).remove(club).commit();
+        super.onDestroy();
+        finish();
+        Log.d("HomePage","onDestroy()");
     }
 }

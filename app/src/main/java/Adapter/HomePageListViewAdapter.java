@@ -26,6 +26,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import MyView.MyViewPager;
 import MyView.RoundImageView;
 import Tool.ViewPagerScroller;
 
@@ -111,7 +112,7 @@ public class HomePageListViewAdapter extends BaseAdapter {
                             parent, false);
 
                     holder1 = new ViewHolder1();
-                    holder1.vp_activity = (ViewPager) convertView
+                    holder1.vp_activity = (MyViewPager) convertView
                             .findViewById(R.id.vp_activity);
                     convertView.setTag(holder1);
                     break;
@@ -154,11 +155,11 @@ public class HomePageListViewAdapter extends BaseAdapter {
         } else {
             switch (type) {
                 case TYPE_1:
-                    holder1 = (ViewHolder1) convertView.getTag();
+                   // holder1 = (ViewHolder1) convertView.getTag();
                     return convertView;
                // break;
                 case TYPE_2:
-                    holder2 = (ViewHolder2) convertView.getTag();
+                  //  holder2 = (ViewHolder2) convertView.getTag();
                     return convertView;
                // break;
                 case TYPE_3:
@@ -197,7 +198,7 @@ public class HomePageListViewAdapter extends BaseAdapter {
     }
 
     public class ViewHolder1 {
-        ViewPager vp_activity;
+        MyViewPager vp_activity;
     }
 
     public class ViewHolder2 {
@@ -214,7 +215,7 @@ public class HomePageListViewAdapter extends BaseAdapter {
         ImageView[] picture = new ImageView[3];
     }
 
-    public void handleViewPager(ViewPager vp_activity){
+    public void handleViewPager(MyViewPager vp_activity){
 
         vp_activity.setAdapter(new HomePageActivityAdapter(mViews));
         vp_activity.setOnPageChangeListener(new PageChangeListener(viewLists,vp_activity));
@@ -225,7 +226,7 @@ public class HomePageListViewAdapter extends BaseAdapter {
         }
         scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
         scheduledExecutorService.scheduleAtFixedRate(new ScrollTask(vp_activity), 1, 3, TimeUnit.SECONDS);
-        setViewPagerScrollSpeed(vp_activity,500);
+        setViewPagerScrollSpeed(vp_activity,200);
     }
 
     private class ScrollTask implements Runnable {
@@ -236,13 +237,13 @@ public class HomePageListViewAdapter extends BaseAdapter {
             vp_activity = viewPager;
         }
         public void run() {
-            synchronized (vp_activity) {
+
                 Message message=handler.obtainMessage();
                 message.arg1 = (vp_activity.getCurrentItem()+ 1)
                         % vp_activity.getAdapter().getCount();
                 message.what=0x123;
                 message.sendToTarget();
-            }
+
         }
 
     }

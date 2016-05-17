@@ -18,10 +18,12 @@
             android:layout_margin="10dip"
             android:layout_width="wrap_content"
             app:layout_widthPercent="50%"
+            app:layout_heightPercent="6%"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal"
-            android:layout_centerHorizontal="true">
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
             <RadioButton
                 android:id="@+id/rb_introduce"
                 android:layout_height="wrap_content"
@@ -31,9 +33,10 @@
                 android:text="推荐"
                 android:checked="true"
                 android:textSize="15sp"
+                android:layout_gravity="center_vertical"
                 android:gravity="center"
-                android:paddingTop="2dip"
-                android:paddingBottom="2dip"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
                 android:textColor="@drawable/title_text_sel"
                 android:background="@drawable/rb_bg_01"/>
 
@@ -44,10 +47,11 @@
                 android:layout_weight="1"
                 android:text="社团"
                 android:button="@null"
+                android:layout_gravity="center_vertical"
                 android:gravity="center"
                 android:textSize="15sp"
-                android:paddingTop="2dip"
-                android:paddingBottom="2dip"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
                 android:textColor="@drawable/title_text_sel"
                 android:background="@drawable/rb_bg_02"/>
         </RadioGroup>

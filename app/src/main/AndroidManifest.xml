@@ -15,15 +15,25 @@
         <activity android:name=".LoginAndRegister.RegisterGetCaptchaActivity" />
         <activity android:name=".LoginAndRegister.UserInfoActivity" />
         <activity android:name=".LoginAndRegister.ChangePersonIntroduceActivity" />
-        <activity android:name=".HomePage.HomePageActivity">
+        <activity
+            android:name=".HomePage.HomePageActivity"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomePage.TestActivity"></activity>
-        <activity android:name=".HomePage.ChatGroupActivity"></activity>
+        <activity android:name=".HomePage.TestActivity" />
+        <activity android:name=".HomePage.ChatGroupActivity" />
+        <activity android:name=".PersonSetting.PersonSettingActivity" />
+        <activity android:name=".PersonSetting.PersonInfoChangeActivity" />
+        <activity android:name=".PersonSetting.ChangeHeadActivity" />
+        <activity android:name=".PersonSetting.SchoolActivity" />
+        <activity android:name=".PersonSetting.PublicSchoolActivity" />
+        <activity android:name=".PersonSetting.MyActivityActivity" />
+        <activity android:name=".PersonSetting.OverActivity" >
+        </activity>
+        <activity android:name=".PersonSetting.SystemSettingActivity"></activity>
     </application>
 
 </manifest>

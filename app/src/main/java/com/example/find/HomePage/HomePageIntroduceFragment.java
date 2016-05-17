@@ -7,7 +7,6 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +32,6 @@ import Adapter.HomePageListViewAdapter;
 public class HomePageIntroduceFragment extends Fragment {
 
 
-    private ViewPager vp_activity;
     List<Bitmap> viewLists;//数据源
     private Context mContext; // 上下文
     private LayoutInflater mInflater; // 用于解XML

@@ -6,10 +6,11 @@
     <color name="colorTheme">#FF9C0F</color>
     <color name="LoginBackGround">#E4EBF2</color>
     <color name="LoginInputBox">#F0F8FA</color>
-    <color name="navy">#F0F8FA</color>
+    <color name="navy">#F0EFF5</color>
     <color name="white">#FFFFFF</color>
     <color name="blue">#18B4ED</color>
     <color name="white_drak">#D0EFFA</color>
     <color name="light_black">#687072</color>
-
+    <color name="settingColor">#E4EBF2</color>
+    <color name="black">#000000</color>
 </resources>
