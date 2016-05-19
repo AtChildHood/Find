@@ -5,13 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginAndRegister.SetPasswordActivity">
+    tools:context="com.example.find.HomePage.UserActivity">
+
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorTheme"
-        app:layout_heightPercent="11%"
-        android:id="@+id/relativeLayout">
+        app:layout_heightPercent="9%"
+        android:id="@+id/rl_title">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -27,49 +28,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="找回密码"
+            android:text="金小洛"
             android:id="@+id/tv_title"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:textSize="25sp"
             android:textColor="@android:color/white" />
 
-    </android.support.percent.PercentRelativeLayout>
-
-    <android.support.percent.PercentRelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/relativeLayout"
-        android:layout_alignLeft="@+id/relativeLayout"
-        android:layout_alignStart="@+id/relativeLayout"
-        android:background="@color/LoginBackGround">
-
-
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_marginTopPercent="10%"
-            app:layout_widthPercent="90%"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/et_inputpwd"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:hint="请输入新密码(不少于6位)"
-            android:background="@drawable/login_edittext_input"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="确认"
-            android:id="@+id/bt_submit"
-            android:layout_below="@+id/et_inputpwd"
-            android:layout_alignStart="@+id/et_inputpwd"
-            android:layout_alignEnd="@+id/et_inputpwd"
-            app:layout_marginTopPercent="10%"
-            android:background="@drawable/orange_flat_button"
-            android:textSize="20sp"
+            android:id="@+id/iv_over"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="更多"
+            app:layout_marginRightPercent="5%"
+            android:textSize="18sp"
             android:textColor="@android:color/white"/>
 
     </android.support.percent.PercentRelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bird1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
 </android.support.percent.PercentRelativeLayout>

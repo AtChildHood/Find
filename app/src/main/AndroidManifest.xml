@@ -17,9 +17,10 @@
         <activity android:name=".LoginAndRegister.ChangePersonIntroduceActivity" />
         <activity
             android:name=".HomePage.HomePageActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -31,9 +32,24 @@
         <activity android:name=".PersonSetting.SchoolActivity" />
         <activity android:name=".PersonSetting.PublicSchoolActivity" />
         <activity android:name=".PersonSetting.MyActivityActivity" />
-        <activity android:name=".PersonSetting.OverActivity" >
+        <activity android:name=".PersonSetting.OverActivity" />
+        <activity android:name=".PersonSetting.SystemSettingActivity" />
+        <activity android:name=".PersonSetting.AccountSafeActivity" />
+        <activity android:name=".PersonSetting.BindTelephoneActivity" />
+        <activity android:name=".PersonSetting.SettingCaptchaActivity" />
+        <activity android:name=".PersonSetting.BindSuccessActivity" />
+        <activity android:name=".PersonSetting.PwdChangeActivity" />
+        <activity android:name=".PersonSetting.SetNewPwdActivity" />
+        <activity android:name=".PersonSetting.SetPwdSuccessActivity" />
+        <activity android:name=".PersonSetting.PrivacyActivity" />
+        <activity android:name=".PersonSetting.NoticeSettingActivity">
         </activity>
-        <activity android:name=".PersonSetting.SystemSettingActivity"></activity>
+        <activity android:name=".PersonSetting.ResponseActivity" />
+        <activity android:name=".PersonSetting.AboutActivity" />
+        <activity android:name=".HomePage.UserActivity"
+            >
+
+        </activity>
     </application>
 
 </manifest>

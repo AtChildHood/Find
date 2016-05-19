@@ -68,7 +68,7 @@
             android:layout_alignStart="@+id/et_Captcha"
             android:layout_alignEnd="@+id/et_Captcha"
             app:layout_marginTopPercent="10%"
-            android:background="@drawable/login_button_backgroung"
+            android:background="@drawable/orange_flat_button"
             android:textSize="20sp"
             android:textColor="@android:color/white"/>
 
