@@ -17,13 +17,7 @@
         <activity android:name=".LoginAndRegister.ChangePersonIntroduceActivity" />
         <activity
             android:name=".HomePage.HomePageActivity"
-            android:launchMode="singleTask" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:launchMode="singleTask" />
         <activity android:name=".HomePage.TestActivity" />
         <activity android:name=".HomePage.ChatGroupActivity" />
         <activity android:name=".PersonSetting.PersonSettingActivity" />
@@ -42,13 +36,22 @@
         <activity android:name=".PersonSetting.SetNewPwdActivity" />
         <activity android:name=".PersonSetting.SetPwdSuccessActivity" />
         <activity android:name=".PersonSetting.PrivacyActivity" />
-        <activity android:name=".PersonSetting.NoticeSettingActivity">
-        </activity>
+        <activity android:name=".PersonSetting.NoticeSettingActivity" />
         <activity android:name=".PersonSetting.ResponseActivity" />
         <activity android:name=".PersonSetting.AboutActivity" />
-        <activity android:name=".HomePage.UserActivity"
-            >
-
+        <activity android:name=".HomePage.UserActivity" />
+        <activity android:name=".HomePage.TopicActivity" />
+        <activity android:name=".HomePage.ChatActivity" />
+        <activity android:name=".HomePage.PostDetailActivity" />
+        <activity android:name=".HomePage.MoreActivity" />
+        <activity android:name=".HomePage.ActicityActivity"></activity>
+        <activity android:name=".HomePage.JoinActivtyListActivity">
+        </activity>
+        <activity android:name=".HomePage.SeePictureActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
