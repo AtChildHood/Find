@@ -1,5 +1,7 @@
 package com.example.find.HomePage;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -8,6 +10,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -28,6 +31,7 @@ public class SeePictureActivity extends AppCompatActivity {
     List<View> viewLists = new ArrayList<>();
     TextView tv_page;
     TextView tv_ok;
+    RelativeLayout rl_root;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +42,12 @@ public class SeePictureActivity extends AppCompatActivity {
     }
 
     public void Init(){
+        rl_root = (RelativeLayout)findViewById(R.id.rl_root);
         vp_picture = (ViewPager)findViewById(R.id.vp_picture);
         tv_page = (TextView)findViewById(R.id.tv_page);
-        tv_ok = (TextView) findViewById(R.id.tv_ok);
-        tv_ok.setOnClickListener(new ClickListener());
         screenWidthAndHeight = getScreenHeightAndWidth();
+        tv_ok = (TextView) findViewById(R.id.tv_ok);
+        tv_ok.setOnClickListener(new ClickListener(this));
         for(int i=0;i<5;i++){
             ImageView imageView  = new ImageView(SeePictureActivity.this);
             ViewPager.LayoutParams lp = new ViewPager.LayoutParams();
@@ -99,7 +104,13 @@ public class SeePictureActivity extends AppCompatActivity {
         public void onClick(View v) {
             if (v.getId() == R.id.tv_ok) {
                 LayoutInflater inflaterDl = LayoutInflater.from(context);
-                RelativeLayout layout = (RelativeLayout)inflaterDl.inflate(R.layout.layout_dialog, null );
+                FrameLayout layout = (FrameLayout)inflaterDl.inflate(R.layout.layout_dialog,rl_root,false);
+                layout.findViewById(R.id.fl_ok).getLayoutParams().width = (int)(screenWidthAndHeight[0] * 0.47);
+                layout.findViewById(R.id.fl_ok).getLayoutParams().height = (int)(screenWidthAndHeight[1] * 0.24);
+                final Dialog dialog = new AlertDialog.Builder(SeePictureActivity.this).create();
+                dialog.show();
+                dialog.getWindow().setContentView(layout);
+
             }
         }
     }

@@ -59,11 +59,9 @@ public class HomePageIntroduceFragment extends Fragment {
         viewLists = getViewLists();
         mViews = ViewPagerCycle(root.getContext(),viewLists);
         scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-
         HomePageListViewAdapter listviewAdapter = new HomePageListViewAdapter(root.getContext(),list,topicMap,viewLists,mViews,scheduledExecutorService);
         listView.setAdapter(listviewAdapter);
 
-        // Inflate the layout for this fragment
         return root;
     }
 

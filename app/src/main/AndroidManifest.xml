@@ -18,7 +18,12 @@
         <activity
             android:name=".HomePage.HomePageActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".HomePage.TestActivity" />
+        <activity android:name=".HomePage.TestActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".HomePage.ChatGroupActivity" />
         <activity android:name=".PersonSetting.PersonSettingActivity" />
         <activity android:name=".PersonSetting.PersonInfoChangeActivity" />
@@ -48,10 +53,6 @@
         <activity android:name=".HomePage.JoinActivtyListActivity">
         </activity>
         <activity android:name=".HomePage.SeePictureActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
